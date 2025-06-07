@@ -16,7 +16,7 @@ DEFAULT_CAMERA_CONFIG = {
 }
 
 
-class InvertedDoublePendulumEnv(MujocoEnv, utils.EzPickle):
+class InvertedDoublePendEnv(MujocoEnv, utils.EzPickle):
     r"""
     ## Description
     This environment originates from control theory and builds on the cartpole environment based on the work of Barto, Sutton, and Anderson in ["Neuronlike adaptive elements that can solve difficult learning control problems"](https://ieeexplore.ieee.org/document/6313077),
@@ -175,9 +175,9 @@ class InvertedDoublePendulumEnv(MujocoEnv, utils.EzPickle):
                 "human",
                 "rgb_array",
                 "depth_array",
-                "rgbd_tuple",
-            ],
-            "render_fps": int(np.round(1.0 / self.dt)),
+                "rgbd_tuple"
+                ]
+           
         }
 
     def step(self, action):
